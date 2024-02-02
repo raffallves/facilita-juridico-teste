@@ -32,3 +32,9 @@ yarn-error.log*
 
 # Cloud setup
 app.yaml
+
+# Python
+Lib
+Include
+Scripts
+pyvenv.cfg

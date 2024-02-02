@@ -2,6 +2,7 @@ import Controller from "./Controller";
 import ClientService from "../../services/ClientService";
 import { Request, Response, Router } from 'express';
 import validator from 'validator';
+import TSPAlgorithm from "../../services/TSPAlgorithm";
 
 
 export default class ClientController extends Controller {
@@ -12,6 +13,7 @@ export default class ClientController extends Controller {
         this.router.get('/clientes', this.getAllClients.bind(this));
         this.router.get('/clientes/:id', this.getClientById.bind(this));
         this.router.post('/clientes', this.createClient.bind(this));
+        this.router.post('/algo', this.doTheAlgo.bind(this));
     }
 
     public exposeRouter(): Router {
@@ -62,5 +64,10 @@ export default class ClientController extends Controller {
         } catch (error: any) {
             res.status(500).send(error.message);
         }
+    }
+
+    public doTheAlgo(req: Request, res: Response): void {
+        const data = req.body.data;
+        TSPAlgorithm.doTSP(data);
     }
 }
