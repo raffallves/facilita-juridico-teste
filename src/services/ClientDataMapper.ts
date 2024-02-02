@@ -13,10 +13,10 @@ export interface ClientDTO {
 export default class ClientDataMapper {
     public static toDomain(entry: QueryResultRow): Client {
         return Client.create(
-            entry.name, 
+            entry.nome, 
             entry.email, 
-            entry.phone, 
-            entry.location, 
+            entry.telefone, 
+            entry.local, 
             entry.id
         );
     }

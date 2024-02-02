@@ -1,6 +1,7 @@
 import Entity from "../commons/Entity";
 import ClientId from "./ClientId";
 import ClientLocation, { Point } from "./ClientLocation";
+import validator from "validator";
 
 export default class Client extends Entity {
     private _name: string;
@@ -35,22 +36,24 @@ export default class Client extends Entity {
 
         const uuid = ClientId.create(id);
         const clientLocation = ClientLocation.create(location);
-        return new Client(uuid, name.toLocaleLowerCase(), email, phone, clientLocation);
+        const sanitizedName = this.sanitizeName(name);
+        return new Client(uuid, sanitizedName, email.trim(), phone, clientLocation);
     }
 
     private static validateEmail(email: string): boolean {
-        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        return emailRegex.test(email);
+        return validator.isEmail(email);
     }
 
     private static validatePhoneNumber(phoneNumber: string): boolean {
-        // Regular expression for a basic phone number validation (Brazilian format)
-        const phoneRegex = /^\(?(?:\d{2})\)?[- ]?(?:\d{4,5})[- ]?(?:\d{4})$/;
-        return phoneRegex.test(phoneNumber);
+        return validator.isMobilePhone(phoneNumber);
+    }
+
+    private static sanitizeName(name: string): string {
+        return validator.escape(name.replace(/[^a-zA-ZÀ-ÖØ-öø-ÿ]/g, '').trim());
     }
 
     public getId(): ClientId {
-        return this.getId();
+        return super.getId();
     }
 
     public getName(): string {

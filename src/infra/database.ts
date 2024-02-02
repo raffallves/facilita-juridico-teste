@@ -1,6 +1,6 @@
-import { Pool, PoolClient } from "pg";
+import { Pool } from "pg";
 
-export let connection: PoolClient;
+export let connection: Pool;
 
 export const connect = async (): Promise<void> => {
     try {
@@ -8,15 +8,14 @@ export const connect = async (): Promise<void> => {
             throw new Error('Database port must be provided.');
         }
 
-        const pool = new Pool({
+        connection = new Pool({
             host: process.env.HOST,
             database: process.env.DATABASE,
             user: process.env.USER,
             password: process.env.PASSWORD,
             port: parseInt(process.env.PORT)
         });
-        
-        connection = await pool.connect();
+
     } catch (error) {
         console.error(error);
         throw error;
@@ -26,8 +25,9 @@ export const connect = async (): Promise<void> => {
 export const close = (): void => {
     try {
         if (connection) {
-            connection.release();
+            connection.end();
         }
+
     } catch (error) {
         console.error(error);
         throw error;
