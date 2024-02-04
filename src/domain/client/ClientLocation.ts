@@ -1,8 +1,8 @@
 import ValueObject from '../commons/ValueObject';
 
 export interface Point {
-    x: Number,
-    y: Number
+    x: number,
+    y: number
 }
 
 export default class ClientLocation extends ValueObject<Point> {

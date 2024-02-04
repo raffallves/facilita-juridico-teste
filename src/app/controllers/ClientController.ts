@@ -1,7 +1,6 @@
 import Controller from "./Controller";
 import ClientService from "../../services/ClientService";
 import { Request, Response, Router } from 'express';
-import validator from 'validator';
 import TSPAlgorithm from "../../services/TSPAlgorithm";
 
 
@@ -46,14 +45,10 @@ export default class ClientController extends Controller {
 
     public async createClient(req: Request, res: Response): Promise<void> {
 
-        if (!validator.isInt(req.body.location.x) || !validator.isInt(req.body.location.y)) {
-            throw new Error('Formato de coordenadas inválido.');
-        }
-
         const name: string = req.body.name;
         const email: string = req.body.email;
         const phone: string = req.body.phone;
-        const location: { x: Number, y: Number} = {
+        const location: { x: number, y: number} = {
             x: parseInt(req.body.location.x),
             y: parseInt(req.body.location.y)
         }
@@ -67,7 +62,12 @@ export default class ClientController extends Controller {
     }
 
     public doTheAlgo(req: Request, res: Response): void {
-        const data = req.body.data;
-        TSPAlgorithm.doTSP(data);
+        try {
+            const data = req.body;
+            const algoResult = TSPAlgorithm.doTSP(data);
+            res.status(200).send(algoResult);
+        } catch (error: any) {
+            res.status(500).send(error.message);
+        }
     }
 }

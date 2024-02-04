@@ -1,0 +1,32 @@
+[
+    {
+        "id": "293fe982-dcab-4a54-99a0-5552a8bfd45d",
+        "name": "Eloiza AbraÒo",
+        "email": "elabraco@gmail.com",
+        "phone": "+5511956233258",
+        "location": {
+            "x": 2,
+            "y": 3
+        }
+    },
+    {
+        "id": "5ce08ebd-2f81-4883-a25c-c2fb96c028eb",
+        "name": "Lucas Silva",
+        "email": "lucas.silva@example.com",
+        "phone": "+5511987654321",
+        "location": {
+            "x": 4,
+            "y": 7
+        }
+    },
+    {
+        "id": "c846f2e6-1ca2-49ed-8f12-cb542b3f686e",
+        "name": "Isabella Oliveira",
+        "email": "isabella.oliveira@example.com",
+        "phone": "+5511976543210",
+        "location": {
+            "x": 8,
+            "y": 12
+        }
+    }
+]

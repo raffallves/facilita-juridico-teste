@@ -1,0 +1,107 @@
+[
+    {
+        "id": "293fe982-dcab-4a54-99a0-5552a8bfd45d",
+        "name": "Eloiza Abraão",
+        "email": "elabraco@gmail.com",
+        "phone": "+5511956233258",
+        "location": { "x": 2, "y": 3 }
+    },
+    {
+        "id": "5ce08ebd-2f81-4883-a25c-c2fb96c028eb",
+        "name": "Lucas Silva",
+        "email": "lucas.silva@example.com",
+        "phone": "+5511987654321",
+        "location": { "x": 4, "y": 7 }
+    },
+    {
+        "id": "c846f2e6-1ca2-49ed-8f12-cb542b3f686e",
+        "name": "Isabella Oliveira",
+        "email": "isabella.oliveira@example.com",
+        "phone": "+5511976543210",
+        "location": { "x": 8, "y": 12 }
+    },
+    {
+        "id": "a2e65f50-eb2d-40d4-a1f2-d40fccfa4d21",
+        "name": "Rodrigo Silva",
+        "email": "silveira@outlook.com",
+        "phone": "+5511986552321",
+        "location": { "x": 5, "y": 5 }
+    },
+    {
+        "id": "bb15b1d0-3b5f-4cc1-95ed-87b16a273f94",
+        "name": "Herbert Richards",
+        "email": "herberto@gmail.com",
+        "phone": "+5511986633251",
+        "location": { "x": 4, "y": 80 }
+    },
+    {
+        "id": "298c04d2-3ed7-4a78-96c3-a93ab5335013",
+        "name": "Mais Um",
+        "email": "somaisum@hotmail.com",
+        "phone": "11986533354",
+        "location": { "x": 6, "y": 5 }
+    },
+    {
+        "id": "6253ecdf-6917-4a7f-824c-547179a37f7a",
+        "name": "Livia Galvão",
+        "email": "galvaneira@energas.com",
+        "phone": "11986655222",
+        "location": { "x": 75, "y": 66 }
+    },
+    {
+        "id": "b8d4d038-a948-4b3f-958e-4a9fbc45a8a4",
+        "name": "Marcia Tiburi",
+        "email": "tiburao@yahoo.com",
+        "phone": "11985663321",
+        "location": { "x": 6, "y": 4 }
+    },
+    {
+        "id": "21973312-bb6c-45ca-ae3f-ac394b683595",
+        "name": "Celia Maria",
+        "email": "celinha@gmail.com",
+        "phone": "11966588745",
+        "location": { "x": 5, "y": 7 }
+    },
+    {
+        "id": "46d36adf-956d-43d3-af56-3c76cebc8365",
+        "name": "Angelo Melk",
+        "email": "melkinho_didi@gmail.com",
+        "phone": "11985463215",
+        "location": { "x": 9, "y": 73 }
+    },
+    {
+        "id": "dc0f05fa-714c-47e9-b74f-2053e51b64a5",
+        "name": "Enrico Bovi",
+        "email": "p.enrico@hotmail.com",
+        "phone": "11984445566",
+        "location": { "x": 3, "y": 7 }
+    },
+    {
+        "id": "c28fe231-5323-4c9b-949b-1cfbc0e451b4",
+        "name": "Jovem Zinho",
+        "email": "zinho@gmail.com",
+        "phone": "11975466332",
+        "location": { "x": 9, "y": 11 }
+    },
+    {
+        "id": "cd699472-72fd-4559-981c-445d92ff3209",
+        "name": "David Hume",
+        "email": "humido@yahoo.com",
+        "phone": "11965315764",
+        "location": { "x": 80, "y": 65 }
+    },
+    {
+        "id": "7a88edb9-9744-4023-8964-e619e8aced4f",
+        "name": "Francis Bacon",
+        "email": "baconzitos@gmail.com",
+        "phone": "11987556631",
+        "location": { "x": 8, "y": 7 }
+    },
+    {
+        "id": "72aa078a-cb8e-45de-aa56-c451f0d5aaf0",
+        "name": "Fildo Goal",
+        "email": "ffg@outlook.com",
+        "phone": "11987566325",
+        "location": { "x": 9, "y": 5 }
+    }
+]

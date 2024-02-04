@@ -49,7 +49,7 @@ export default class Client extends Entity {
     }
 
     private static sanitizeName(name: string): string {
-        return validator.escape(name.replace(/[^a-zA-ZÀ-ÖØ-öø-ÿ]/g, '').trim());
+        return validator.escape(name);
     }
 
     public getId(): ClientId {
