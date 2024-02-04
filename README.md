@@ -1,6 +1,6 @@
 # Back End da Aplicação
 
-Este servidor consiste na API responsável por lidar com as requisições do front e interagir com o servidor.
+Este servidor consiste na API responsável por lidar com as requisições do front e interagir com o banco de dados.
 
 Além das dependências especificadas no arquivo `package.json`, também foram utilizadas as seguintes ferramentas:
 
